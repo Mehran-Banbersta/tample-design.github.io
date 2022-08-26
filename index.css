@@ -2,6 +2,7 @@
  margin: 0;
  box-sizing: border-box;
  font-family: "Oswald", sans-serif;
+
 }
 
 :root {
@@ -15,52 +16,43 @@
 
 /*    */
 header {
- background-color: #f3efef;
+ background-color:var(--white);
 display: flex;
-justify-content: space-between;
+justify-content:space-between;
 align-items: center;
+max-width: 100%;
+padding: 2.5em 0em;
 
- height: 80PX;
-font-size: 1rem;
- padding: 0em 8em;
 }
-/*    */
+
 header nav ul li {
  display: inline;
 
 }
-
 header nav ul li a{
- display: inline;
-text-decoration: none;
-margin-left: .5em;
-margin-right: .5em;
-color: var(--dark-black);
-
-padding: .4em .8em;
+ text-decoration: none;
+ margin-left: .5em;
 }
 
-header nav ul li a:hover:not(.active){
- background-color: var(--orange);
- transition: 1.1s;
 
- border-radius: 2em;
-
+#menu{
+ display: none;
 }
 
-header nav ul li a.active {
-background-color: var(--aqua);
-padding: 2em 1em;
-color: var(--white);
+
+/*--menu---*/
+
+
+#menu span{
+background-color: var(--dark-blue);
+height: 4px;
+margin-bottom: .2em;
+width: 40px;
+display: block;
+/*margin-left: 1em;*/
 }
+/*    */
 
-header nav ul li:last-child {
- background-color: var(--orange);
- padding: .4em .2em;
- border-radius: 2em;
-
- 
- }
 /* ----------------------------   */
 #overlay {
  background-color: #ebae3d;
@@ -69,6 +61,8 @@ header nav ul li:last-child {
 
 
 /*  --------------------------------   */
+
+
 header .search-icon {
  background-color: var(--orange);
  color: var(--blue);
@@ -84,6 +78,10 @@ header span {
 
 }
 /*-------section-2---------*/
+
+#section-2 {
+ max-width: 100%;
+}
 
 #main-background {
 background-image: url(./Images/photo-1.jpg);
@@ -130,15 +128,19 @@ font-size: larger;
 
 #section-3 {
  display: flex;
-justify-content: space-around;
+ flex-direction: row;
  align-items: center;
  padding: 0em 5em;
  text-align: center;
  margin-top: 3em;
 margin-bottom: 3em;
+
 }
 
-
+.main-services {
+ flex: 1;
+ margin: 0px 10px;
+}
 
 .main-services img {
 
@@ -194,19 +196,19 @@ border: none;
 
 #section-4-container {
  display: flex;
-justify-content: space-between;
-
-
-
-
+flex-direction: row;
 }
 
 .section-4-content {
-width: 30%;
- padding-left: 1em;
- padding-right: 1em;
+ flex: 1;
+ margin: 0px 10px;
 
 } 
+
+.section-4-content img {
+ width: 100%;
+ height: 300px;
+}
 
 .section-4-content h3 {
 Padding-top: 1em;
@@ -348,12 +350,40 @@ padding: 1em 0em;
  
 }
 
+
+
+
+/***************Responsive design for bigger devices*********************/
+
+@media only screen and (min-width: 600px) {
+ #menu span{
+ display: none;
+  }
+}
+
+
+/***************Responsive design for small devices*********************/
 @media only screen and (max-width: 600px) {
+ /*********  header**************/
  header {
+/*justify-content: center;*/
+justify-items: flex-end;
+  padding: 0em 0em;
   max-width: 100%;
  }
+/*
+ header .logo {
+ position: relative;
+
+ }
+*/
  header nav {
   display: none;
+ }
+
+ #menu {
+  display: block;
+  
  }
 /*****section-3*******/
  #section-3 {
