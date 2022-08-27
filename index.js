@@ -1,22 +1,24 @@
-let searchInput = document.getElementById("input-search")
-let learnMore = document.getElementById("learn-more")
 
 
+
+//////
 document.getElementById('search-btn').addEventListener("click", function(){
 console.log("click")
-
+let searchInput = document.getElementById("input-search")
 searchInput.innerHTML = `<div id="overlay-input">
 <input type="text" placeholder="Search">
-<button id="close-input">x</button>
+<button id="close-input">CLOSE</button>
 </div>
 `
+document.getElementById("navigation-bar").style.display = "none"
 document.getElementById("close-input").addEventListener("click", function(){
  document.getElementById("overlay-input").style.display = "none"
+ document.getElementById("navigation-bar").style.display = "block"
 })
 })
 
-
-
+//////////
+let learnMore = document.getElementById("learn-more")
 document.getElementById("learn-btn").addEventListener("click", function(){
  //document.getElementById("overlay").style.display = "none"
  console.log("click")
@@ -60,7 +62,7 @@ document.getElementById("menu").addEventListener("click", function(){
   
   showMenu.innerHTML = `
    <div id="overlay-menu">
-   <button id="close-menu">CLOSE</button>
+   <button id="close-menu">x</button>
   <nav class="mobile-menu">
 
   <ul>
@@ -81,7 +83,15 @@ document.getElementById("menu").addEventListener("click", function(){
    </li>
   </ul>
  </nav>
+
+ <div class="social-media">
+ <a>facebook</a>
+ <a>facebook</a>
+ <a>facebook</a>
+ <a>facebook</a>
  </div>
+ </div>
+
 `
  document.getElementById("close-menu").addEventListener("click", function(){
  console.log("close")
