@@ -51,3 +51,42 @@ document.getElementById("learn-btn").addEventListener("click", function(){
  })
 })
 
+
+//////////////////////////
+let showMenu = document.getElementById("Show-menu")
+console.log(showMenu)
+document.getElementById("menu").addEventListener("click", function(){
+  console.log("click")
+  
+  showMenu.innerHTML = `
+   <div id="overlay-menu">
+   <button id="close-menu">CLOSE</button>
+  <nav class="mobile-menu">
+
+  <ul>
+   <li>
+     <a href="#" class="active">Home</a>
+   </li>
+   <li>
+     <a href="#">Contact</a>
+   </li>
+   <li>
+     <a href="#">About Us</a>
+   </li>
+   <li>
+     <a href="#">Products</a>
+   </li>
+   <li>
+     <a href="#" class="last-child">Gallery</a>
+   </li>
+  </ul>
+ </nav>
+ </div>
+`
+ document.getElementById("close-menu").addEventListener("click", function(){
+ console.log("close")
+ document.getElementById("overlay-menu").style.display = "none"
+ })
+
+})
+
