@@ -1,7 +1,7 @@
 
 
 
-//////
+// section search input 
 document.getElementById('search-btn').addEventListener("click", function(){
 console.log("click")
 let searchInput = document.getElementById("input-search")
@@ -17,7 +17,7 @@ document.getElementById("close-input").addEventListener("click", function(){
 })
 })
 
-//////////
+// section learn more button in main menu
 let learnMore = document.getElementById("learn-more")
 document.getElementById("learn-btn").addEventListener("click", function(){
  //document.getElementById("overlay").style.display = "none"
